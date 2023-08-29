@@ -1,0 +1,54 @@
+_____3______
+npm init
+enter enter
+app.js (at entry point)
+enter yes
+//npm install --global yarn
+//yarn --version
+//npm install express
+yarn add express
+package.json->scripts->"start": "node app.js",
+yarn start
+//app.js outputs on console now
+__________________
+request methods
+GET : take data e.g 
+POST : provide data e.g form,login,id,password,fb post
+network tab in inspect
+http response status codes ~ 200=ok (in status column)
+Request Response
+make servers with app.get,app.post,app.listen
+download postman/insomnia
+insomnia -> new doc -> debug -> http request -> GET/POST localhost url
+how to access request body
+app.use(express.json())
+insomnia -> body -> json (will post from client side->console req.body in app.js)
+destructuring req.body in ES5 or ES6
+__________________
+mongodb compass is a tool like insomnia
+mongo db altas is the database
+start free -> setup -> database deployments -> connect -> driver
+mongoURI= & paste connection string in new .env file in backend folder
+change password in database access and replace with <password> in .env
+secrets like username,password,api token go in .env
+nodejs package -> express
+mongodb package -> mongoose
+yarn add mongoose
+how to add env variable in express
+require("dotenv").config();
+console process.env.mongoURI
+connect db with mongoose.connect
+create model folder -> user.js
+make user model with help from mongoose documentation
+schema -> model -> export model(User)
+Schema : defines properties of model
+import in app.js & recieve user details from client in post request from insomnia
+save using async await user details
+database -> collections -> view details
+make get api await Model.find() to show all models(users)
+_________4__________
+make routes folder -> users.js
+mongoose Queries -> findOne
+export functions login,register from routes to APIs in app.js (code cleaned)
+express.Router() , bcrypt.hash() (yarn add bcrypt)
+make order & product models & routers
